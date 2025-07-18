@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-18T12:40:32 IST" name="Default suite" finished-at="2025-07-18T12:40:59 IST" duration-ms="26592">
+  <suite started-at="2025-07-18T14:48:01 IST" name="Default suite" finished-at="2025-07-18T14:48:37 IST" duration-ms="35762">
     <groups>
     </groups>
-    <test started-at="2025-07-18T12:40:32 IST" name="Default test" finished-at="2025-07-18T12:40:59 IST" duration-ms="26592">
-      <class name="Category.AddCategory">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Category.AddCategory@48f2bd5b]" started-at="2025-07-18T12:40:33 IST" name="setup" finished-at="2025-07-18T12:40:43 IST" duration-ms="9938" status="PASS">
+    <test started-at="2025-07-18T14:48:01 IST" name="Default test" finished-at="2025-07-18T14:48:37 IST" duration-ms="35762">
+      <class name="Category.EditCategory">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Category.EditCategory@47eaca72]" started-at="2025-07-18T14:48:02 IST" name="setup" finished-at="2025-07-18T14:48:17 IST" duration-ms="15832" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginAndClickCategoryTest()[pri:0, instance:Category.AddCategory@48f2bd5b]" started-at="2025-07-18T12:40:43 IST" name="loginAndClickCategoryTest" finished-at="2025-07-18T12:40:59 IST" duration-ms="16489" status="PASS">
+        <test-method signature="loginAndClickCategoryTest()[pri:0, instance:Category.EditCategory@47eaca72]" started-at="2025-07-18T14:48:17 IST" name="loginAndClickCategoryTest" finished-at="2025-07-18T14:48:37 IST" duration-ms="19667" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndClickCategoryTest -->
-      </class> <!-- Category.AddCategory -->
+      </class> <!-- Category.EditCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

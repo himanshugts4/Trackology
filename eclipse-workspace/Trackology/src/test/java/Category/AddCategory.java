@@ -22,12 +22,12 @@ public class AddCategory {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        driver.get("https://beta.trackology.eu/"); // Replace with actual login URL
+        driver.get("https://d3upskqh949jf6.cloudfront.net/sign-in"); // Replace with actual login URL
         
     }
     @Test
     public void loginAndClickCategoryTest() throws InterruptedException {
-        driver.findElement(By.name("email")).sendKeys("himanshu.joshi@gtsinfosoft.com");
+        driver.findElement(By.name("email")).sendKeys("track6@yopmail.com");
         driver.findElement(By.name("password")).sendKeys("12345678");
         driver.findElement(By.xpath("(//button[normalize-space()='Sign in'])[1]")).click();
 
