@@ -27,7 +27,7 @@ public class AddCategory {
     }
     @Test
     public void loginAndClickCategoryTest() throws InterruptedException {
-        driver.findElement(By.name("email")).sendKeys("track6@yopmail.com");
+        driver.findElement(By.name("email")).sendKeys("kavita1@yopmail.com");
         driver.findElement(By.name("password")).sendKeys("12345678");
         driver.findElement(By.xpath("(//button[normalize-space()='Sign in'])[1]")).click();
 
