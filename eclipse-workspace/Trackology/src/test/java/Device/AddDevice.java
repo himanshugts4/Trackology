@@ -142,7 +142,6 @@ public class AddDevice {
         WebElement noteField = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//textarea[@name='note' and not(@readonly)]")));
         noteField.sendKeys("This is a test note.");
-        System.out.println("📥 Note entered successfully");
         
         
         WebElement noteField1 = driver.findElement(By.xpath("//textarea[@name='description' and not(@aria-hidden)]"));
