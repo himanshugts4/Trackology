@@ -3,6 +3,7 @@ package Device;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -56,14 +57,31 @@ public class EditDevice {
 			System.out.println("SVG icon not clickable.");
 		}
 
-		
-		   WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
-	        WebElement editOption = wait.until(ExpectedConditions.elementToBeClickable(
-	            By.xpath("//li[.//span[normalize-space()='Edit']]")
-	        ));
-	        editOption.click();
-	        System.out.println("✅ 'Edit' option clicked successfully.");
-	        
-		
+		WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement editOption = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[.//span[normalize-space()='Edit']]")));
+		editOption.click();
+		System.out.println("✅ 'Edit' option clicked successfully.");
+		/*
+		 * WebElement deviceNameField = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//input[@name='deviceName']")));
+		 * 
+		 * // Step 1: Clear old text (if it exists) deviceNameField.clear();
+		 * 
+		 * // Step 2: Send new device name deviceNameField.sendKeys("Dog Report");
+		 * System.out.println("📥 Device name Updated Sucessfully");
+		 */
+
+		WebElement deviceNameField = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='deviceName']")));
+
+		// Select all + delete
+		deviceNameField.sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
+
+		// Enter new device name
+		deviceNameField.sendKeys("Dog");
+		System.out.println("📥 Device name updated");
+
 	}
 }
