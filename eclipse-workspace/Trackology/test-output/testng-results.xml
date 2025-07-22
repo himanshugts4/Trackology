@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-21T18:25:19 IST" name="Default suite" finished-at="2025-07-21T18:25:59 IST" duration-ms="39121">
+  <suite started-at="2025-07-22T12:09:02 IST" name="Default suite" finished-at="2025-07-22T12:09:39 IST" duration-ms="36416">
     <groups>
     </groups>
-    <test started-at="2025-07-21T18:25:19 IST" name="Default test" finished-at="2025-07-21T18:25:59 IST" duration-ms="39121">
+    <test started-at="2025-07-22T12:09:02 IST" name="Default test" finished-at="2025-07-22T12:09:39 IST" duration-ms="36416">
       <class name="Device.EditDevice">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Device.EditDevice@47eaca72]" started-at="2025-07-21T18:25:20 IST" name="setup" finished-at="2025-07-21T18:25:32 IST" duration-ms="12834" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Device.EditDevice@48f2bd5b]" started-at="2025-07-22T12:09:03 IST" name="setup" finished-at="2025-07-22T12:09:13 IST" duration-ms="10663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginAndAddDeviceTest()[pri:0, instance:Device.EditDevice@47eaca72]" started-at="2025-07-21T18:25:32 IST" name="loginAndAddDeviceTest" finished-at="2025-07-21T18:25:59 IST" duration-ms="26092" status="PASS">
+        <test-method signature="loginAndAddDeviceTest()[pri:0, instance:Device.EditDevice@48f2bd5b]" started-at="2025-07-22T12:09:13 IST" name="loginAndAddDeviceTest" finished-at="2025-07-22T12:09:39 IST" duration-ms="25584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndAddDeviceTest -->
