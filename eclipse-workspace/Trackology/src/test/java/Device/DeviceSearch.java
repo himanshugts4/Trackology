@@ -47,33 +47,104 @@ public class DeviceSearch {
 				ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Device Management']")));
 		deviceMgmtBtn.click();
 		System.out.println("✅ Clicked on Device Menu");
-		
-		String imei = "350693901679710";
 
-        // 🔐 Login logic if needed (add here...)
+		// Search Via IMEI Number
 
-        // 🔎 Step 1: Search for IMEI
-        WebElement searchInput = wait.until(ExpectedConditions.elementToBeClickable(
-            By.xpath("//input[@placeholder='Search Name, IMEI']")));
-        searchInput.clear();
-        searchInput.sendKeys(imei);
-        searchInput.sendKeys(Keys.ENTER);
-        System.out.println("🔍 IMEI entered in search: " + imei);
+		/*
+		 * 
+		 * String imei = "350693901679710";
+		 * 
+		 * // 🔐 Login logic if needed (add here...)
+		 * 
+		 * // 🔎 Step 1: Search for IMEI WebElement searchInput = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.
+		 * xpath("//input[@placeholder='Search Name, IMEI']"))); searchInput.clear();
+		 * searchInput.sendKeys(imei); searchInput.sendKeys(Keys.ENTER);
+		 * System.out.println("🔍 IMEI entered in search: " + imei);
+		 * 
+		 * // 🕒 Wait for results to load Thread.sleep(2000); // Optional delay
+		 * 
+		 * // 💡 Step 2: Scroll down in case result is below ((JavascriptExecutor)
+		 * driver).executeScript("window.scrollBy(0,300);");
+		 * 
+		 * // ✅ Step 3: Find IMEI span element WebElement imeiSpan = wait.until(
+		 * ExpectedConditions.visibilityOfElementLocated(By.
+		 * xpath("//span[contains(text(), '" + imei + "')]")));
+		 * System.out.println("✅ IMEI found on screen: " + imeiSpan.getText());
+		 * 
+		 * // 🧪 Assertion (optional) assert imeiSpan.getText().contains(imei) :
+		 * "IMEI not matched!";
+		 */
+		/*
+		 * 
+		 * Search Via Name String nameToSearch = "Dog";
+		 * 
+		 * // ✅ Step 1: Enter name in search box WebElement searchInput = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.
+		 * xpath("//input[@placeholder='Search Name, IMEI']"))); searchInput.clear();
+		 * searchInput.sendKeys(nameToSearch);
+		 * System.out.println("🔍 Name entered in search: " + nameToSearch);
+		 * 
+		 * // Optional delay if search is live Thread.sleep(2000);
+		 * 
+		 * // ✅ Step 2: Verify name is shown in results WebElement nameElement =
+		 * wait.until(ExpectedConditions
+		 * .visibilityOfElementLocated(By.xpath("//td//span[normalize-space()='" +
+		 * nameToSearch + "']"))); System.out.println("✅ Name found in table: " +
+		 * nameElement.getText());
+		 * 
+		 * // Optional assert assert
+		 * nameElement.getText().equalsIgnoreCase(nameToSearch) : "Name not matched!";
+		 * 
+		 */
 
-        // 🕒 Wait for results to load
-        Thread.sleep(2000); // Optional delay
+		WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // 💡 Step 2: Scroll down in case result is below
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300);");
+		// Wait and click on status dropdown
+		WebElement statusDropdown = wait.until(
+				ExpectedConditions.elementToBeClickable(By.xpath("//button[.//span[contains(text(), 'Status')]]")));
+		statusDropdown.click();
+		System.out.println("✅ Status dropdown clicked");
 
-        // ✅ Step 3: Find IMEI span element
-        WebElement imeiSpan = wait.until(ExpectedConditions.visibilityOfElementLocated(
-            By.xpath("//span[contains(text(), '" + imei + "')]")));
-        System.out.println("✅ IMEI found on screen: " + imeiSpan.getText());
+		WebDriverWait wait6 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // 🧪 Assertion (optional)
-        assert imeiSpan.getText().contains(imei) : "IMEI not matched!";
-    }
+		// Wait for dropdown option to appear
+		WebElement unusedOption = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//li[@role='menuitem' and normalize-space()='unused']")));
+
+		// Scroll into view (optional but safe)
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", unusedOption);
+
+		// Click on the option
+		unusedOption.click();
+		System.out.println("✅ 'unused' option selected from dropdown");
+
+		// Switched to 'Active Devices' tab
+
+		WebElement activeTab = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//button[@role='tab' and normalize-space()='Active Devices']")));
+		activeTab.click();
+		System.out.println("✅ Switched to 'Active Devices' tab");
+
+		// Switched to 'inactive Devices' tab
+
+		WebElement inactiveTab = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//button[@role='tab' and normalize-space()='Inactive Devices']")));
+		inactiveTab.click();
+		System.out.println("✅ Switched to 'Inactive Devices' tab");
+
+		// Switched to 'Unused Devices' tab
+		WebElement unusedDevicesTab = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//button[@role='tab' and normalize-space()='Unused Devices']")));
+		unusedDevicesTab.click();
+		System.out.println("✅ Switched to 'Unused Devices' tab");
+
+		// Switched to 'Transferred Devices' tab
+		WebElement transferredDevicesTab = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//button[@role='tab' and normalize-space()='Transferred Devices']")));
+		transferredDevicesTab.click();
+		System.out.println("✅ Switched to 'Transferred Devices' tab");
+
 	}
 
-
+}
