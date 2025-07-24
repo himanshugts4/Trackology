@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AddRole {
+public class EditRole {
 
 	WebDriver driver;
 
@@ -58,53 +58,60 @@ public class AddRole {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", usersMenu);
 		System.out.println("✅ Clicked on Role & Permission menu");
 
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement svgIcon = driver.findElement(By.xpath("//tbody/tr[4]/td[4]/button[1]//*[name()='svg']"));
 
-		WebElement AddRole = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Add New Role']")));
+		if (svgIcon.isDisplayed() && svgIcon.isEnabled()) {
+			svgIcon.click();
+			System.out.println("SVG icon clicked successfully.");
+		} else {
+			System.out.println("SVG icon not clickable.");
+		}
 
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", AddRole);
-		System.out.println("✅ Clicked on Add Role Button");
-
-		// Enter Role Name
-		WebElement role = driver.findElement(By.xpath("//input[@placeholder='Enter role name']"));
-		role.sendKeys("A1");
-		System.out.println("📥 entered Role Name");
-
-		/*
-		 * WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 * 
-		 * // Wait for the toggle switch to be clickable WebElement toggle =
-		 * wait.until(ExpectedConditions.elementToBeClickable( By.
-		 * xpath("//label[contains(@class, 'MuiFormControlLabel-root')]//span[contains(@class,'MuiSwitch-switchBase')]"
-		 * ) ));
-		 * 
-		 * // Click the toggle switch toggle.click();
-		 * 
-		 * System.out.println("✅ All Toggle button clicked.");
-		 * 
-		 */
+		WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement editOption = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[.//span[normalize-space()='Edit']]")));
+		editOption.click();
+		System.out.println("✅ 'Edit' option clicked successfully.");
 
 		WebDriverWait wait6 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		// Wait for the toggle switch to be clickable
 		WebElement toggle = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//label[contains(@class, 'MuiFormControlLabel-root')])[2]")));
+				.elementToBeClickable(By.xpath("(//label[contains(@class, 'MuiFormControlLabel-root')])[3]")));
 
 		// Click the toggle switch
 		toggle.click();
 
-		System.out.println("✅ User Managemnet Toggle button clicked.");
+		System.out.println("✅ Category Managemnet Toggle button clicked.");
+		
+		
+		WebDriverWait wait7 = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-		// Click User Management Collapse option (corrected spelling)
+		// Wait for the toggle switch to be clickable
+		WebElement toggle5 = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("(//label[contains(@class, 'MuiFormControlLabel-root')])[4]")));
+
+		// Click the toggle switch
+		toggle5.click();
+
+		System.out.println("✅ Role Managemnet Toggle button clicked.");
+
+
 		WebElement expandIcon = driver
-				.findElement(By.xpath("(//*[name()='svg' and @data-testid='ExpandMoreIcon'])[1]"));
+				.findElement(By.xpath("(//*[name()='svg' and @data-testid='ExpandMoreIcon'])[2]"));
 		expandIcon.click();
-		System.out.println("✅ User Management Collapse Option clicked.");
-		WebElement addButton = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Add']")));
-		addButton.click();
-		System.out.println("✅ Add button clicked successfully");
+		System.out.println("✅ Role Managemnet Collapse Option clicked.");
+
+		WebElement UpdateButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Update']")));
+		UpdateButton.click();
+		System.out.println("✅ Update button clicked successfully");
+		
+		
+		
+		
+		
 
 	}
+
 }
