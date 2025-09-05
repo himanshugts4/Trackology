@@ -93,15 +93,14 @@ public class GenerateReport {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", GeofenceActivity);
 		System.out.println("✅ Clicked on Geofence Activity Tab ");
 
-	
-		
 		// Click to open the start date picker
 		driver.findElement(By.xpath("//input[@placeholder='Select start date']")).click();
 
 		// Click on the Previous Month button (move calendar back by one month)
 		driver.findElement(By.xpath("//button[@title='Previous month']//*[name()='svg']")).click();
 
-		// [Optional] Click on calendar icon (unclear from previous code, but including as you had it)
+		// [Optional] Click on calendar icon (unclear from previous code, but including
+		// as you had it)
 		driver.findElement(By.xpath("//*[name()='path' and contains(@d,'M7 10l5 5 ')]")).click();
 
 		// Click on the year "2024"
@@ -113,34 +112,33 @@ public class GenerateReport {
 		// Click OK to confirm date selection (if required by the calendar UI)
 		driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
 
-		System.out.println("✅ Start Date Successfully Selected");  
-		
-		
+		System.out.println("✅ Start Date Successfully Selected");
+
 		// Click to open the End date picker
-				driver.findElement(By.xpath("//input[@placeholder='Select end date']")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Select end date']")).click();
 
-				// Click on the Previous Month button (move calendar back by one month)
-				driver.findElement(By.xpath("//button[@title='Previous month']//*[name()='svg']")).click();
+		// Click on the Previous Month button (move calendar back by one month)
+		driver.findElement(By.xpath("//button[@title='Previous month']//*[name()='svg']")).click();
 
-				// [Optional] Click on calendar icon (unclear from previous code, but including as you had it)
-				driver.findElement(By.xpath("//*[name()='path' and contains(@d,'M7 10l5 5 ')]")).click();
+		// [Optional] Click on calendar icon (unclear from previous code, but including
+		// as you had it)
+		driver.findElement(By.xpath("//*[name()='path' and contains(@d,'M7 10l5 5 ')]")).click();
 
-				// Click on the year "2024"
-				driver.findElement(By.xpath("//button[normalize-space()='2024']")).click();
+		// Click on the year "2024"
+		driver.findElement(By.xpath("//button[normalize-space()='2024']")).click();
 
-				// Click on a specific date — for example, 5th of the month
-				driver.findElement(By.xpath("//button[normalize-space()='6']")).click();
+		// Click on a specific date — for example, 5th of the month
+		driver.findElement(By.xpath("//button[normalize-space()='6']")).click();
 
-				// Click OK to confirm date selection (if required by the calendar UI)
-				driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
+		// Click OK to confirm date selection (if required by the calendar UI)
+		driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
 
-				System.out.println("✅ End Date Successfully Selected");  
+		System.out.println("✅ End Date Successfully Selected");
 
-				// Date Filter Reset
-				driver.findElement(By.xpath("//button[normalize-space()='Reset']")).click();
-		
-				System.out.println("✅ Date Filter reset Successfully");  
-		
+		// Date Filter Reset
+		driver.findElement(By.xpath("//button[normalize-space()='Reset']")).click();
+
+		System.out.println("✅ Date Filter reset Successfully");
 
 	}
 
