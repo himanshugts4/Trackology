@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-05T13:16:14 IST" name="Default suite" finished-at="2025-09-05T13:17:12 IST" duration-ms="57968">
+  <suite started-at="2025-09-05T17:06:17 IST" name="Default suite" finished-at="2025-09-05T17:06:50 IST" duration-ms="33161">
     <groups>
     </groups>
-    <test started-at="2025-09-05T13:16:14 IST" name="Default test" finished-at="2025-09-05T13:17:12 IST" duration-ms="57968">
-      <class name="ecommerce.ProductList">
-        <test-method is-config="true" signature="setup()[pri:0, instance:ecommerce.ProductList@48f2bd5b]" started-at="2025-09-05T13:16:14 IST" name="setup" finished-at="2025-09-05T13:16:29 IST" duration-ms="14277" status="PASS">
+    <test started-at="2025-09-05T17:06:17 IST" name="Default test" finished-at="2025-09-05T17:06:50 IST" duration-ms="33161">
+      <class name="ecommerce.Myorder">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ecommerce.Myorder@48f2bd5b]" started-at="2025-09-05T17:06:17 IST" name="setup" finished-at="2025-09-05T17:06:30 IST" duration-ms="13229" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="productmenuclick()[pri:0, instance:ecommerce.ProductList@48f2bd5b]" started-at="2025-09-05T13:16:29 IST" name="productmenuclick" finished-at="2025-09-05T13:17:12 IST" duration-ms="43454" status="PASS">
+        <test-method signature="productmenuclick()[pri:0, instance:ecommerce.Myorder@48f2bd5b]" started-at="2025-09-05T17:06:30 IST" name="productmenuclick" finished-at="2025-09-05T17:06:50 IST" duration-ms="19413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productmenuclick -->
-      </class> <!-- ecommerce.ProductList -->
+      </class> <!-- ecommerce.Myorder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -5,8 +5,10 @@
     <classes>
       <class name="ecommerce.ProductList">
         <methods>
+          <include name="negativeInvalidPayment"/>
+          <include name="teardown"/>
           <include name="setup"/>
-          <include name="productmenuclick"/>
+          <include name="negativeInvalidLogin"/>
         </methods>
       </class> <!-- ecommerce.ProductList -->
     </classes>
